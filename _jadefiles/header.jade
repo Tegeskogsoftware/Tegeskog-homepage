@@ -1,17 +1,23 @@
+mixin nav-content()
+  ul
+    li: a(href="#about") About
+    li: a(href="#youtuber") YouTuber
+    li: a(href="#mentoring") Mentoring
+    li: a(href="#article") Article
+    li: a(href="#vine") Vine
+    li: a(href="#design") Design
+    li: a(href="#notes") Notes
+    li: a(href="#contact") Contact
+    
+.mobile-nav
+  +nav-content()
 header
   .header-position
     h1.logo Tomas Tegeskog
     
     nav.site-nav
-      ul
-        li: a(href="#about") About
-        li: a(href="#youtuber") YouTuber
-        li: a(href="#mentoring") Mentoring
-        li: a(href="#article") Article
-        li: a(href="#vine") Vine
-        li: a(href="#design") Design
-        li: a(href="#notes") Notes
-        li: a(href="#contact") Contact
-        
+      +nav-content()
     a(href="mailto: tomas.tegeskog@icloud.com").email-link +mail me
   
+    .mobile-nav-toggle: span
+      
